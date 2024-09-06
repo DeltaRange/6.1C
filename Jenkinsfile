@@ -64,14 +64,12 @@ pipeline {
         mail to: 'ranul.dewmin@gmail.com',
              subject: "Pipeline Succeeded: ${currentBuild.fullDisplayName}",
              body: "Stage ${env.STAGE_NAME} completed successfully.\n\nView the logs here: ${env.BUILD_URL}",
-             attachLog: true
             }
 
     failure {
         mail to: 'ranul.dewmin@gmail.com',
              subject: "Pipeline Failed: ${currentBuild.fullDisplayName}",
              body: "Stage ${env.STAGE_NAME} failed.\n\nView the logs here: ${env.BUILD_URL}",
-             attachLog: true
             }
         }
 
